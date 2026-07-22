@@ -1,0 +1,34 @@
+class overload {
+    String name;
+    int age;
+
+    // Default constructor
+    overload() {
+        name = "Unknown";
+        age = 0;
+    }
+
+    // Constructor with one parameter
+    overload(String name) {
+        this.name = name;
+        age = 0;
+    }
+
+    // Constructor with two parameters
+    overload(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+
+    public static void main(String[] args) {
+        overload s1 = new overload("Shree",18);
+        overload s2 = new overload("Gokul", 19);
+
+        s1.display();
+        s2.display();
+    }
+}
