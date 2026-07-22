@@ -1,0 +1,24 @@
+class parameterized {
+
+    String name;
+    int id;
+
+    parameterized(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Id: " + id);
+    }
+
+    public static void main(String[] args) {
+        parameterized student1 = new parameterized("Gokul", 21);
+        parameterized student2 = new parameterized("akhill", 69);
+
+        student1.display();
+        System.out.println();
+        student2.display();
+    }
+}
