@@ -1,0 +1,17 @@
+class gopi {
+    void talking() {
+        System.out.println("Talking");
+    }
+}
+
+class Akhil extends gopi {
+    void writing() {
+        System.out.println("Writing");
+    }
+
+    public static void main(String[] args) {
+        Akhil obj = new Akhil();
+        obj.talking();
+        obj.writing();
+    }
+}  
