@@ -1,0 +1,25 @@
+class harish {
+    void eat() {
+        System.out.println("Harish is eating");
+    }
+}
+
+class dinesh extends harish {
+    void sit() {
+        System.out.println("Dinesh is sitting");
+    }
+}
+
+class arun extends dinesh {
+    void type() {
+        System.out.println("Arun is typing");
+    }
+
+    public static void main(String[] args) {
+        arun obj = new arun();
+
+        obj.eat();  
+        obj.sit();   
+        obj.type();  
+    }
+}
