@@ -1,0 +1,16 @@
+Part B: HashMap (Product Catalog) 
+import java.util.*;  
+class ProductCatalog { 
+public static void main(String args[]) { 
+HashMap<Integer, String> products = new HashMap<Integer, String>();  products.put(101, "Laptop"); 
+products.put(102, "Mobile");  
+products.put(103, "Printer");  
+products.put(104, "Camera");  
+System.out.println("Product Details");  
+for(Map.Entry<Integer, String> p : 
+products.entrySet()) {  
+System.out.println(p.getKey() + " : " +p.getValue()); 
+} 
+System.out.println("\nProduct with ID 102 : " + products.get(102)); 
+} 
+} 
