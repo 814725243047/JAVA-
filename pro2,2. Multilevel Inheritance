@@ -1,0 +1,16 @@
+class Employee { 
+String name = "Arun"; 
+} 
+class Manager extends Employee {  
+String department = "IT"; 
+} 
+class TeamLead extends Manager {  
+void display() { 
+System.out.println("Name: " + name);  
+System.out.println("Department: " + department); 
+} 
+public static void main(String args[]) {  
+TeamLead t = new TeamLead();  
+t.display(); 
+} 
+} 
