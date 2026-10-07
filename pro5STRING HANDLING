@@ -1,0 +1,64 @@
+Program 
+class EmailValidation { 
+public static void main(String args[]) {  
+String email = "student@gmail.com"; 
+if (email.contains("@") && email.endsWith(".com") && !email.contains(" ")) { System.out.println("Valid Email Address"); 
+} 
+else { 
+System.out.println("Invalid Email Address"); 
+} 
+System.out.println("Length : " + email.length());  
+System.out.println("Upper Case : " + email.toUpperCase()); 
+System.out.println("User Name : " + email.substring(0, email.indexOf("@"))); } 
+}
+
+
+
+Prerequisite Programs 
+1. Printing a String 
+class StringDemo { 
+public static void main(String args[]) {  
+String name = "Java Programming";  
+System.out.println(name); 
+} 
+} 
+2. Reading and Displaying a String 
+import java.util.Scanner; 
+class InputString { 
+public static void main(String args[]) {  
+Scanner sc = new Scanner(System.in);  
+System.out.print("Enter your name: ");  
+String name = sc.nextLine();  
+System.out.println("Welcome " + name);  
+sc.close(); 
+} 
+} 
+3. Using Loops with Strings 
+class StringLength { 
+public static void main(String args[]) {  
+String str = "JAVA"; 
+for(int i=0; i<str.length(); i++) {  
+System.out.println(str.charAt(i)); 
+} 
+} 
+}
+4. Comparing Two Strings 
+class CompareString { 
+public static void main(String args[]) {  
+String s1 = "Java"; 
+String s2 = "Java";  
+if(s1.equals(s2)) 
+System.out.println("Strings are Equal");  
+else 
+System.out.println("Strings are Not Equal"); 
+} 
+} 
+5. Basic String Operations 
+class StringOperations { 
+public static void main(String args[]) {  
+String str = "Java Programming"; 
+System.out.println("Length = " + str.length());  
+System.out.println("Upper Case = " + str.toUpperCase());  
+System.out.println("Lower Case = " + str.toLowerCase()); 
+} 
+} 
