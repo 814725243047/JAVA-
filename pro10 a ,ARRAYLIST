@@ -1,0 +1,19 @@
+Part A: ArrayList (Shopping Cart) 
+import java.util.*;  
+class ShoppingCart { 
+public static void main(String args[]) { 
+ArrayList<String> cart = new ArrayList<String>();  cart.add("Laptop"); 
+cart.add("Mobile");  
+cart.add("Headphones");  
+cart.add("Smart Watch");  
+System.out.println("Products in Cart");  
+for(String item : cart) { 
+System.out.println(item); 
+} 
+cart.remove("Mobile"); 
+System.out.println("\nUpdated Cart");  
+for(String item : cart) { 
+System.out.println(item); 
+} 
+} 
+} 
