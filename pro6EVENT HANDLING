@@ -1,0 +1,35 @@
+import java.awt.*;  
+import java.awt.event.*; 
+class Calculator extends Frame implements ActionListener {  Label l1, l2, l3; 
+TextField t1, t2, t3;  
+Button b;  
+Calculator() { 
+l1 = new Label("Number 1");  
+l2 = new Label("Number 2");  
+l3 = new Label("Result");
+t1 = new TextField(10);  
+t2 = new TextField(10);  
+t3 = new TextField(10);  
+b = new Button("Add"); 
+setLayout(new FlowLayout());  
+add(l1); 
+add(t1); 
+add(l2); 
+add(t2); 
+add(b); 
+add(l3); 
+add(t3);  
+b.addActionListener(this);  
+setSize(300, 200);  
+setVisible(true); 
+} 
+public void actionPerformed(ActionEvent e) { 
+int a = Integer.parseInt(t1.getText()); 
+int b = Integer.parseInt(t2.getText());  
+int c = a + b;  
+t3.setText(String.valueOf(c)); 
+} 
+public static void main(String args[]) {  
+new Calculator(); 
+} 
+} 
