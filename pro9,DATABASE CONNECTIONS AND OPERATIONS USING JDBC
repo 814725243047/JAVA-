@@ -1,0 +1,26 @@
+Step 1: Create Database  
+CREATE DATABASE company;  
+USE company; 
+CREATE TABLE employee(empid INT PRIMARY KEY,empname VARCHAR(50), salary DOUBLE);
+Step 2: Java Program 
+import java.sql.*; 
+class EmployeeJDBC { 
+public static void main(String args[]) {  
+try { 
+Class.forName("com.mysql.cj.jdbc.Driver");  
+Connection con = DriverManager.getConnection( 
+"jdbc:mysql://localhost:3306/company", "root","root");  
+Statement stmt = con.createStatement(); 
+String insert ="INSERT INTO employee VALUES" + "(101,'Arun',50000)";  stmt.executeUpdate(insert); 
+System.out.println("Record Inserted Successfully."); 
+ResultSet rs = stmt.executeQuery("SELECT * FROM employee");  System.out.println("\nEmployee Details"); 
+while (rs.next()) { 
+System.out.println(rs.getInt("empid")+ " "+ rs.getString("empname") + " " + rs.getDouble("salary")); 
+} 
+con.close(); 
+} 
+catch(Exception e) {  
+System.out.println(e); 
+} 
+} 
+} 
