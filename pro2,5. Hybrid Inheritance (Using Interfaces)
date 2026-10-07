@@ -1,0 +1,19 @@
+class Person { 
+String name = "Priya"; 
+} 
+interface Sports {  
+void game(); 
+} 
+class Student extends Person implements Sports {  
+public void game() { 
+System.out.println("Playing Basketball"); 
+} 
+void display() {  
+System.out.println("Name: " + name); 
+} 
+public static void main(String args[]) {  
+Student s = new Student();  
+s.display(); 
+s.game(); 
+} 
+} 
