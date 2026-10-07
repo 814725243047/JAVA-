@@ -1,0 +1,34 @@
+import javax.swing.*;  
+import java.awt.*;  
+import java.awt.event.*; 
+class StudentRegistration extends JFrame implements ActionListener {  JLabel l1, l2, l3; 
+JTextField t1, t2;  
+JComboBox<String> dept;  
+JButton submit;  
+StudentRegistration() { 
+l1 = new JLabel("Register Number");  
+l2 = new JLabel("Student Name"); 
+l3 = new JLabel("Department");  
+t1 = new JTextField(20); 
+t2 = new JTextField(20); 
+String d[] = {"CSE", "IT", "ECE", "EEE"}; 
+dept = new JComboBox<>(d);  
+submit = new JButton("Submit");  
+setLayout(new FlowLayout()); 
+add(l1); add(t1); add(l2); add(t2); add(l3); add(dept);  add(submit); 
+submit.addActionListener(this);  
+setTitle("Student Registration Form");  
+setSize(350,250); 
+setVisible(true);  
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+} 
+public void actionPerformed(ActionEvent e) {  
+String regNo = t1.getText(); 
+String name = t2.getText(); 
+String department = (String) dept.getSelectedItem();  
+JOptionPane.showMessageDialog( this, "Registration Successful\n" + "Reg No : " + regNo + "\nName : " + name + "\nDepartment : " + department); 
+} 
+public static void main(String args[]) {  
+new StudentRegistration(); 
+} 
+}
