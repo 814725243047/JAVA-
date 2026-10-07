@@ -1,0 +1,26 @@
+class Employee {  
+int empId; 
+String empName; 
+static int employeeCount = 0;  
+Employee(int id, String name) { 
+empId = id;  
+empName = name;  
+employeeCount++; 
+} 
+void display() { 
+System.out.println("Employee ID : " + empId);  
+System.out.println("Employee Name : " + empName); 
+}
+static void displayCount() { 
+System.out.println("Total Employees : " + employeeCount); 
+} 
+public static void main(String args[]) {  
+Employee e1 = new Employee(101, "Arun");  
+Employee e2 = new Employee(102, "Priya");  
+Employee e3 = new Employee(103, "Kiran");  
+e1.display(); 
+e2.display(); 
+e3.display();  
+Employee.displayCount(); 
+} 
+} 
