@@ -1,0 +1,37 @@
+File 1: Payment.java 
+package payment; 
+public interface Payment {  
+void pay(); 
+void display(); 
+} 
+File 2: UPIPayment.java 
+package payment; 
+public class UPIPayment implements Payment {  
+private String customerName; 
+protected double amount; 
+public UPIPayment(String customerName,  double amount) { 
+this.customerName = customerName;  this.amount = amount; 
+} 
+public void pay() {  
+System.out.println("Payment Successful"); } 
+public void display() {  
+System.out.println("Customer Name : " + customerName);  
+System.out.println("Amount Paid : " 
++ amount); 
+} 
+} 
+File 3: Main.java 
+import payment.UPIPayment; 
+class Main { 
+public static void main(String args[]) { 
+UPIPayment p = 
+new UPIPayment("Arun", 2500); 
+p.display(); 
+p.pay(); 
+} 
+}
+Compilation 
+javac -d . Payment.java  
+javac -d . UPIPayment.java  
+javac Main.java 
+java Main 
