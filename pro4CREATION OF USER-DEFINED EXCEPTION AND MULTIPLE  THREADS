@@ -1,0 +1,42 @@
+Step 1: User-Defined Exception 
+class InsufficientBalanceException extends Exception {  
+InsufficientBalanceException(String msg) { 
+super(msg); 
+} 
+} 
+Step 2: Account Class 
+class Account { 
+double balance = 10000; 
+void withdraw(double amount) 
+throws InsufficientBalanceException {  
+if (amount > balance) { 
+throw new InsufficientBalanceException("Insufficient Balance"); } 
+balance = balance - amount;  
+System.out.println("Withdrawal Successful");  
+System.out.println("Remaining Balance : " + balance); 
+} 
+} 
+Step 3: Multiple Threads 
+class CustomerTransaction extends Thread {  
+String customerName;  
+CustomerTransaction(String name) { 
+customerName = name; 
+} 
+public void run() { 
+System.out.println(customerName + " is performing transaction."); } 
+} 
+Main Program 
+class ATMSystem { 
+public static void main(String args[]) {  
+Account a = new Account(); 
+try { 
+a.withdraw(12000); 
+} 
+catch (InsufficientBalanceException e) {  
+System.out.println(e.getMessage()); 
+} 
+CustomerTransaction c1 = new CustomerTransaction("Arun");  CustomerTransaction c2 = new CustomerTransaction("Priya");  CustomerTransaction c3 = new CustomerTransaction("Kiran");  c1.start(); 
+c2.start(); 
+c3.start(); 
+} 
+}
