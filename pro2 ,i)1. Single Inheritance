@@ -1,0 +1,19 @@
+class Account { 
+int accNo = 1001;  
+double balance = 50000; 
+void displayAccount() {  
+System.out.println("Account Number: " + accNo);  
+System.out.println("Balance: " + balance); 
+} 
+} 
+class SavingsAccount extends Account {  
+double interest = 6.5; 
+void displayInterest() { 
+System.out.println("Interest Rate: " + interest + "%"); 
+} 
+public static void main(String args[]) {  
+SavingsAccount s = new SavingsAccount();  
+s.displayAccount(); 
+s.displayInterest(); 
+} 
+} 
